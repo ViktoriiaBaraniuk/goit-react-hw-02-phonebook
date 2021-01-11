@@ -45,9 +45,12 @@ class Form extends Component {
 
     const { name, number } = this.state;
     if (this.contactCheck()) {
+      this.reset();
       return;
     }
+
     this.props.onSubmit(name, number);
+
     this.reset();
   };
 
